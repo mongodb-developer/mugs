@@ -5,7 +5,13 @@
 In this workshop, you will discover more about MongoDB Atlas, the Database as a Service (DBaaS) by MongoDB and MongoDB Stitch,
 the serverless platform which can be used to build different things like a REST API on top of your MongoDB clusters,
 interconnect MongoDB with AWS or Twilio services for example, host a frontend or build a mobile application while enforcing
-security rules. 
+security rules.
+
+## Prerequisites
+
+- None. Your awesome organizer will present you the basics of MongoDB with this [slide deck](https://www.slideshare.net/MaximeBeugnet/mongodb-meetup-139633820). 30-45 minutes.
+- You will need about 2 hours to complete this workshop.
+- I highly encourage you to be curious, to dig a bit more the around the features and options in workshop and of course ask questions!
 
 ## Let's do it
 
@@ -26,25 +32,27 @@ First, you will need to create a [MongoDB Replica Set](https://docs.mongodb.com/
  
 ![Load Sample Dataset](images/load-sample-dataset.png)
  
-- Familiarize yourself with the different tabs in your cluster:
+- Click on your cluster and familiarize yourself with the different tabs:
   - Connect - where you can get the MongoDB URI to connect with the command line, your application, MongoDB Compass or the BI
   Connector.
-  - Real Time - where you can see what's happening right now on your cluster,
-  - Metrics - where you can explore all the metrics history,
-  - Collections - where you can browse your collections and manipulate the data, 
+  - Real Time - where you can see what's happening right now on your cluster (only on dedicated servers),
+  - Metrics - where you can explore all the metrics history (more metrics in dedicated servers of course!),
+  - Collections - where you can browse your collections and manipulate the data,
   - Command Line Tools - where you can copy/paste the command lines to use MongoDB import/export/dump/restore/top/stats.
 
 > NB: Because you are currently loading the sample dataset, you should see some writes in the *Real Time* and *Metrics* tabs. 
 
-- You are now ready to work with your new cluster.
-- In order to do that, you will need to complete 2 actions in the *Security* tab at the top: 
+- You are now *almost* ready to work with your new cluster.
+- In order to do be *completely* ready, you will need to complete 2 actions in the *Security* tab at the top: 
   - Create a MongoDB User for your cluster because the authentication is ON of course!
-  - Whitelist your public IP address because we are in the cloud and it's not an open bar for hackers!
+  - Whitelist your public IP address because we are in the cloud and it's not an open bar for hackers! If you don't allow your IP address, you won't be able to access your cluster with your machine.
  
  ![Load Sample Dataset](images/security.png)
  
+- We will now verify that you can connect correctly to your cluster using [MongoDB Compass](https://www.mongodb.com/download-center/compass).
+- Please install the latest version of MongoDB Compass Enterprise from the download center to be able to try all the features.
 - To verify that you have correctly setup the MongoDB User and your IP address, try to connect with MongoDB Compass using the 
- *Connect* button and follow the instructions.
+ *Connect* button and use the MongoDB URI you can copy easily.
  
 ### MongoDB Compass
  
@@ -93,7 +101,10 @@ First, you will need to create a [MongoDB Replica Set](https://docs.mongodb.com/
 ```
 
 - Import this pipeline in MongoDB Compass using the import tool.
-- Can you change this pipeline to find the 5 biggest cities in the State of New York?
+
+![Import pipeline](images/import-pipeline.png)
+
+- Can you change this pipeline to find the 5 biggest cities in the State of New York (NY)?
 
 <details><summary>Click to see the answer</summary>
  
