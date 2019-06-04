@@ -60,9 +60,9 @@ First, you will need to create a [MongoDB Replica Set](https://docs.mongodb.com/
  
 #### Lab: GeoSpatial
  
-- Build a geo spatial query on the `sample_geospatial.shipwrecks` database using the map you will find in the *Schema* tab.
+- Build a geo spatial query on the `sample_geospatial.shipwrecks` collection using the map you will find in the *Schema* tab. Tips: You can scroll on the map to find the Statue of Liberty then you have to hold Shift + drag your mouse on the map to build a geospatial query.
 - How many wrecks are within 10km of the Statue of Liberty?
-- Clue : The radius unit is radian. Find a way to transform 10km in radian [here](https://docs.mongodb.com/manual/tutorial/calculate-distances-using-spherical-geometry-with-2d-geospatial-indexes/).
+- Clue : Where is the radius in the query? It's in radian. Find a way to transform 10km in radian [here](https://docs.mongodb.com/manual/tutorial/calculate-distances-using-spherical-geometry-with-2d-geospatial-indexes/).
  
 <details><summary>Click to see the answer</summary><p>
   The answer is 66 :-).
@@ -402,7 +402,7 @@ exports = function(changeEvent) {
 <details><summary>Click to know why it's not working</summary>
 
 It's not working for 2 reasons: 
-- Firstly, you need to activate the anonymous authentification which is not enabled by default.
+- Firstly, you need to activate the anonymous authentication which is not enabled by default.
 - Secondly, you need to allow the "MongoDB Query Anywhere" feature to read this `stitch.movies` collection we created. By default, nothing is authorised.
 </details>
 
